@@ -33,7 +33,7 @@
     <main class="main">
         <div class="main__wrapper-title">
             <div class="main__title">
-                <h1>Lampadari contemporanei</h1>
+                <h1>LAMPADARI CONTEMPORANEI</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore </p>
             </div>
         </div>
@@ -69,6 +69,7 @@
     </div>
     <div class="footer__body">
         <div class="news">
+            <div class="container">
             <div class="news__item">
                 <h1>Lampadari made in italy</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -87,14 +88,16 @@
                     labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                     laboris nisi ut aliquip ex ea </p>
             </div>
-            <div class="news__item">
+                <div class="news__item">
                 <form action="" class="subscribe">
-                    <h1></h1>
-                    <input class="subscribe__item" type="text">
-                    <input class="subscribe__item" type="text">
+                    <h1>NEWSLETTER</h1>
+                    <input class="subscribe__item" type="text" placeholder="Nome e Cognome">
+                    <input class="subscribe__item" type="text" placeholder="E-mail">
                     <input class="subscribe__item" type="checkbox">
+                    <p>Acconsento al trattamento dei dati</p>
                     <button class="subscribe__item"></button>
                 </form>
+            </div>
             </div>
         </div>
     </div>
@@ -104,6 +107,35 @@
         <div class="language"></div>
     </div>
 </footer>
+<div class="out-layer hidden"></div>
+<div class="popup hidden">
+    <h1>AREA RISERVATA</h1>
+        <div class="popup__column">
+                <h1>ACCEDI</h1>
+        <form action="" class="authorization">
+            <input type="text" class="authorization__item" placeholder="E-mail">
+            <input type="password" class="authorization__item" placeholder="Password">
+            <button class="authorization_item"></button>
+            <p>Password dimenticata</p>
+        </form>
+    </div>
+    <div class="popup__column">
+        <form action="" class="registration">
+            <h1>REGISTRATI</h1>
+            <input type="text" class="authorization__item" placeholder="Nome">
+            <input type="text" class="authorization__item" placeholder="Cognome">
+            <input type="text" class="authorization__item" placeholder="E-mail">
+            <input type="password" class="authorization__item" placeholder="Password">
+            <input type="checkbox" class="authorization__item">
+            <p>Acconsento al trattamento dei dati</p>
+            <input type="checkbox" class="authorization__item">
+            <p>Acconsento al trattamento dei dati</p>
+            <button class="registration_item"></button>
+            <p>Mi iscrivo alla Newsletter</p>
+        </form>
+    </div>
+</div>
+
 <script src="jquery-3.5.1.min.js"></script>
 <script src="scripts.js"></script>
 </body>
