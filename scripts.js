@@ -1,18 +1,23 @@
-const btnControlFoot = document.querySelector('.arrows');
+const btnControlFoot = document.querySelector('.footer__button');
 const footWindow = document.querySelector('.footer__head');
 const popup = document.querySelector('.popup');
 const outLayer = document.querySelector('.out-layer');
 const openModal = document.querySelector('.controls__item');
+const modalClose = document.querySelector('.popup__cross');
 
-
+function closeModal(){
+    outLayer.classList.add('hidden');
+    popup.classList.add('hidden');
+    popup.classList.remove('open');
+}
 
 function handler(element,event,method) {
 element.addEventListener(event,method);
 }
 
 handler(btnControlFoot,'click',function () {
-    $(".footer__head").slideToggle("slow");
-    outLayer.classList.remove('hidden');
+  footWindow.classList.toggle('close');
+  btnControlFoot.classList.toggle('arrow_up');
 });
 
 handler(openModal,'click',function () {
@@ -21,8 +26,6 @@ handler(openModal,'click',function () {
     popup.classList.add('open');
 });
 
-handler(outLayer,'click',function () {
-    outLayer.classList.add('hidden');
-    popup.classList.add('hidden');
-    popup.classList.remove('open');
-});
+handler(outLayer,'click',closeModal);
+
+handler(modalClose,'click',closeModal);
