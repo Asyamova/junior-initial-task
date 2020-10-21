@@ -24,13 +24,33 @@ p, a {
     font-weight: 400;
     font-family: 'Open Sans', sans-serif;
 }
-input{
+button:active{
+    background-color:#e2d1a6;
+}
+button:hover{
+    text-decoration: underline;
+}
+input[type=text],input[type=password]{
     outline: none;
-    max-width: 180px;
+    width: 180px;
+    padding: 8px 0;
+    margin-bottom: 10px;
 }
 .input[placeholder]{
     color:#8c8c8c;
     font-size: 14px;
+}
+label{
+    font-size: 10px;
+    line-height: 24px;
+    color: #b5b4b4;
+    display: block;
+}
+input[type=checkbox]{
+    vertical-align: middle;
+}
+label span{
+    vertical-align: middle;
 }
 .footer__head.close{
     transform: translate(-50%, 100%);
@@ -232,7 +252,7 @@ input{
 }
 
 .footer .container {
-    max-width: 75%;
+    max-width: 80%;
 }
 
 .footer__head {
@@ -249,12 +269,50 @@ input{
     background-color: #353436;
     position: relative;
 }
+.footer__foot{
+    display: flex;
+    justify-content: space-between
+}
 .news__item{
     margin-right: 50px;
     padding: 30px 0;
 }
 .news__item h1{
     text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.property__item{
+    margin: 0 10px;
+}
+.network_icon{
+    display: flex;
+    margin-left: 130px;
+  }
+.network_icon__item{
+    margin: 0 5px;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.network_icon__item.facebook{
+    background-image: url("../images/icon_facebook.png");
+}
+.network_icon__item.instagram{
+    background-image: url("../images/icon_instagram.png");
+}
+.network_icon__item.pinterest{
+    background-image: url("../images/icon_pinterest.png");
+}
+.language{
+    display: flex;
+    margin: 0 35px;
+}
+.language__item:not(:last-child):after{
+    content: "";
+    border-right: 2px solid white;
+    margin: 0 10px;
 }
 .out-layer {
     background-color: #ffffff;
@@ -267,9 +325,9 @@ input{
 }
 .popup {
     position: fixed;
+    padding: 10px 10px 20px;
     background-color: #353436;
-    width: 600px;
-    height: 360px;
+    width: 620px;
     top: 33%;
     left: 50%;
     transform: translateX(-50%);
@@ -284,11 +342,19 @@ input{
     width: 100%;
 }
 .popup__column{
-    width: 50%;
-    text-align: center;
+    width: 30%;
+    margin: 0 10%;
 }
 .popup__column h1{
     font-size: 18px;
+    margin: 0 0 12px 0;
+    text-align: left;
+}
+.popup__column p{
+    height: 14px;
+    font-size: 12px;
+    line-height: 24px;
+    color: #b5b4b4;
 }
 .popup__cross{
     background-image: url(../images/cross.png);
@@ -301,22 +367,17 @@ input{
     height: 25px;
     cursor: pointer;
 }
-.subscribe__item{
-margin-bottom: 10px;
-    padding: 10px 0;
-}
-.authorization__item{
-        margin: 5px 0;
-}
-.registration__item{
-    margin:15px 0;
-}
+
 .submit__item{
     background-color: #000000;
     color: #ffffff;
     font-size: 18px;
     line-height: 24px;
     outline: none;
+    display: block;
+    padding: 5px 50px;
+    border: 0;
+    cursor: pointer;
 }
 
 
