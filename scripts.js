@@ -4,6 +4,7 @@ const popup = document.querySelector('.popup');
 const outLayer = document.querySelector('.out-layer');
 const openModal = document.querySelector('.controls__item');
 const modalClose = document.querySelector('.popup__cross');
+const pagination = document.querySelectorAll('.pagination_round');
 
 function closeModal(){
     outLayer.classList.add('hidden');
@@ -29,3 +30,16 @@ handler(openModal,'click',function () {
 handler(outLayer,'click',closeModal);
 
 handler(modalClose,'click',closeModal);
+
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+        loop:true,
+        margin:0,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            }
+        }
+    });
+});
