@@ -18,12 +18,23 @@
             </div>
             <div class="header__main">
                 <nav class="navigation">
-                    <a href="#" class="navigation__link">HOME</a>
-                    <a href="#" class="navigation__link">AZIENDA</a>
-                    <a href="#" class="navigation__link">COLLEZIONI</a>
-                    <a href="#" class="navigation__link">NEWS</a>
-                    <a href="#" class="navigation__link">CONTATTI</a>
+                    <ul>
+                        <li><a href="#" class="navigation__link">HOME</a></li>
+                        <li><a href="#" class="navigation__link">AZIENDA</a>
+                            <ul class="sub-navigation">
+                               <li><a href="#" class="sub-navigation__link">STORIA</a></li>
+                                <li><a href="#" class="sub-navigation__link">MM DESIGN</a></li>
+                                <li><a href="#" class="sub-navigation__link">DESIGNER</a></li>
+                                <li><a href="#" class="sub-navigation__link">CERTIFICAZIONI</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="navigation__link">COLLEZIONI</a></li>
+                        <li><a href="#" class="navigation__link">NEWS</a></li>
+                        <li><a href="#" class="navigation__link">CONTATTI</a></li>
+
+                    </ul>
                 </nav>
+
                 <div class="controls">
                     <a class="controls__item" href="#">AREA RISERVATA</a>
                 </div>
@@ -89,7 +100,7 @@
                         laboris nisi ut aliquip ex ea </p>
                 </div>
                 <div class="news__item">
-                    <form action="" class="subscribe">
+                    <form class="subscribe">
                         <h1>NEWSLETTER</h1>
                         <input class="subscribe__item" type="text" placeholder="Nome e Cognome">
                         <input class="subscribe__item" type="text" placeholder="E-mail">
@@ -122,8 +133,6 @@
             <a class="language__item">ENG</a>
             <a class="language__item">DEU</a>
             <a class="language__item">PYC</a>
-
-
         </div>
     </div>
 </footer>
@@ -134,7 +143,7 @@
     </div>
     <div class="popup__column">
         <h1>ACCEDI</h1>
-        <form action="" class="authorization">
+        <form class="authorization">
             <input type="text" class="authorization__item" placeholder="E-mail">
             <input type="password" class="authorization__item" placeholder="Password">
             <button class="submit__item">ACCEDI</button>
@@ -142,7 +151,7 @@
         </form>
     </div>
     <div class="popup__column">
-        <form action="" class="registration">
+        <form class="registration">
             <h1>REGISTRATI</h1>
             <input type="text" class="registration__item" placeholder="Nome">
             <input type="text" class="registration__item" placeholder="Cognome">

@@ -24,6 +24,12 @@ p, a {
     font-weight: 400;
     font-family: 'Open Sans', sans-serif;
 }
+.navigation>ul{
+    display: flex;
+}
+li{
+    list-style-type: none;
+}
 button:active{
     background-color:#e2d1a6;
 }
@@ -110,11 +116,35 @@ label span{
     padding-right: 20px;
 
 }
+.navigation{
+    position: relative;
+}
 
-.navigation__link:not(:last-child) {
+.navigation>ul>li:not(:last-child) {
     margin-right: 25px;
 }
 
+.wrap__sub-navigation{
+    display: flex;
+}
+.navigation li:hover > ul{
+    visibility: visible;
+}
+
+.sub-navigation{
+    background-color: #353436;
+    position: absolute;
+    display: grid;
+    padding: 30px 20px 20px;
+    font-size: 16px;
+    line-height: 24px;
+    left: 100px;
+    visibility: hidden;
+
+}
+.sub-navigation li:not(:last-child){
+    border-bottom: 1px solid #ffffff;
+}
 .main {
     flex: auto;
     background-image: url("../images/background.jpg");
