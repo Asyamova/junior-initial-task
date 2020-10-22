@@ -26,6 +26,7 @@ p, a {
 }
 .navigation>ul{
     display: flex;
+    margin: 0;
 }
 li{
     list-style-type: none;
@@ -127,7 +128,7 @@ label span{
 .wrap__sub-navigation{
     display: flex;
 }
-.navigation li:hover > ul{
+.navigation li:hover>ul{
     visibility: visible;
 }
 
@@ -147,18 +148,30 @@ label span{
 }
 .main {
     flex: auto;
-    background-image: url("../images/background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat
+    overflow: hidden;
+    position: relative;
 }
-
-.main__wrapper-title {
+.owl-carousel{
+    height: 100%;
+}
+.owl-stage-outer{
+    height: 100%;
+}
+.owl-stage{
+    height: 100%;
+}
+.owl-item{
+    height: 100%;
+}
+.main__slider {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin: 15px 0 15px 15px;
     height: 100%;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .main__title {
@@ -166,6 +179,11 @@ label span{
     opacity: 0.8;
     padding: 5px 35px;
     max-width: 530px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
 }
 
 .main__title h1 {
@@ -214,43 +232,43 @@ label span{
     line-height: 30px;
     font-weight: 700;
 }
-.yellow {
+.comment.yellow {
     background-color: #e2d1a6;
 }
-.yellow span{
+.comment.yellow span{
     color: #ffffff;
     text-decoration: underline;
 }
-
-.white {
+.comment.white {
     background-color: #ffffff;
 }
-
-.black {
+.comment.black {
     background-color: #000000;
     color: #ffffff;
 }
 
-.pagination {
+.owl-dots  {
     display: flex;
     justify-content: space-around;
     margin-bottom: 10px;
     width: 70px;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.pagination_round {
+.main .owl-carousel button.owl-dot {
     cursor: pointer;
     width: 14px;
     height: 14px;
     background-color: #ffffff;
     border-radius: 100%;
     border: 1px solid #000000;
-}
-.pagination_round:focus{
-    background-color: #e2d1a6;
+    outline: none;
 }
 
-.pagination_round.active {
+.main .owl-carousel button.owl-dot.active {
     background-color: #e2d1a6;
 }
 
@@ -279,6 +297,7 @@ label span{
     line-height: 17px;
     font-weight: 300;
     position: relative;
+    z-index: 2;
 }
 
 .footer .container {
