@@ -532,7 +532,6 @@ label span {
 }
 
 @media screen and (max-width: 768px) {
-    navigation
     .navigation {
         position: fixed;
         right: 0;
