@@ -607,3 +607,8 @@ label span {
         font-size: 16px;
     }
 }
+@media screen and (max-width: 280px) {
+.main__title{
+    display: none;
+}
+}
